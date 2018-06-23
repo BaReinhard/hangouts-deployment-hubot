@@ -1,1 +1,1 @@
-web: bin/hubot -a hangoutschat
+web: echo ${KEY_FILE} > ./new.json && ./bin/hubot -a hangoutschat
