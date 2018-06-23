@@ -1,8 +1,10 @@
 
-axios = require 'axios'
+http = require 'http'
 module.exports = (robot) ->
     robot.hear /dog/i, (res) ->
-        dogs = axios.get("https://dog.ceo/api/breeds/image/random") 
-        dogs.then (r) ->
-            res.reply r.message
+        http.get { host: 'https://dog.ceo/api/breeds/image/random' }, (r) ->
+            r.on 'data', (chunk) ->
+                res.reply chunk.toString()
+            
+                
     
