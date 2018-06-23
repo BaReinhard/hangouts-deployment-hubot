@@ -21,5 +21,8 @@
   },
   "engines": {
     "node": "8.1.x"
+  },
+  "scripts": {
+    "start": "echo ${KEY_FILE} > ./new.json && ./bin/hubot -a hangoutschat"
   }
 }
