@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - v8
-deploy: 
+install: 
   - echo $NETRC > ~/.netrc
   - git push heroku master
   - echo "Deployment Finished"
