@@ -1,5 +1,7 @@
 
+axios = require 'axios'
 module.exports = (robot) ->
     robot.hear /dog/i, (res) ->
-        res.reply "More dog stuff to come"
-  
+        axios.get "https://dog.ceo/api/breeds/image/random", (r) ->
+            res.reply r.message
+    
