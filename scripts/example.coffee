@@ -10,8 +10,6 @@
 
 module.exports = (robot) ->
 
-  robot.hear /test/i, (res) ->
-    res.reply "This test has worked, great job on your Continuous Deployment setup"
   robot.hear /badger/i, (res) ->
     res.reply "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   
